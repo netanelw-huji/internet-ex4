@@ -1,0 +1,129 @@
+body {
+	background-color: #4aacc5;
+	color: #ffffff;
+	font-family: Verdana, Arial, sans-serif;
+	border: 3px solid #ffffff;
+	margin: 0;
+	padding: 12px 30px 0px 35px;
+}
+
+#authBox {
+	float: right;
+	margin-bottom: -11px;
+}
+
+.authInput {
+	border: 1px solid #000000;
+	margin: 0px 8px 0px 5px;
+	height: 25px;
+	width: 110px;
+	padding-top: 3px;
+}
+
+.authInput#password {
+	width: 130px;
+}
+
+.authInputLabels {
+	color: #000000;
+	font-size: 11pt;
+}
+
+#authButton {
+	background-color: #4f81bc;
+	color: #ffffff;
+	border: 4px solid #ffffff;
+	border-radius: 7px;
+	box-shadow: 1px 3px 0px 0px #367592;
+	padding: 3px 30px 3px 26px;
+	margin-left: 8px;
+}
+#authButton:active {
+	background-color: #4f81bc;
+	color: #ffffff;
+	border: 4px solid #ffffff;
+	border-radius: 7px;
+	box-shadow: 0px 0px 0px;
+	padding: 3px 30px 3px 26px;
+	margin-right: 0px;
+	margin-left: 10px;
+}
+
+#pic {
+	float: right;
+	margin-top: 15px;
+	transform: rotate(10deg);
+	-webkit-transform: rotate(10deg);
+	-ms-transform: rotate(10deg);
+	width: 300px;
+	height: 300px;
+}
+
+#personalDetails {
+	font-size: 22pt;
+}
+
+#amusing {
+	font-size: 16pt;
+}
+
+u {
+	text-decoration: none;
+	border-bottom: 3px solid #ffffff;
+}
+
+hr {
+	background-color: #000000;
+	height: 1px;
+	border: 0px;
+	width: 100%;
+	margin-left: -37px;
+	padding-right: 69px;
+	display: block;
+}
+
+table {
+	border-spacing: 0px;
+}
+td, th {
+	padding: 10px 30px 10px 10px;
+}
+tr.head th {
+	color: #ffffff;
+	background-color: #4f81bc;
+	border-bottom: 2px solid #547ca0;
+	text-align: center;
+	text-shadow: -1px -1px 1px #547ca0;
+}
+
+tr.head th:first-child {
+	border-top-left-radius: 10px;
+}
+tr.head th:last-child {
+	border-top-right-radius: 10px;
+}
+table tr:last-child td:first-child {
+	border-bottom-left-radius: 10px;
+}
+table tr:last-child td:last-child {
+	border-bottom-right-radius: 10px;
+}
+
+tr td {
+	background-color: #e8eff5;
+}
+tr.alt td {
+	background-color: #d5e2ff;
+}
+td {
+	color: black;
+}
+td a {
+	color: black;
+	text-decoration: none;
+	font-weight: bold;
+}
+td a:hover {
+	background-color: #90b4d6;
+}
+

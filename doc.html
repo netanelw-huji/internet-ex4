@@ -1,0 +1,90 @@
+<html>
+	<head>
+		<title>Testing Documentation</title>
+	</head>
+	<body>
+		<h3>Testing basic requests</h3>
+		<p>
+			Requesting existing ex2's files, and checking for:<br />
+			- Status 200<br />
+			- Content-Type header exists and corresponds to the file type.<br />
+			- Content-Length header exists and corresponds to the file size.<br />
+			- Date header exists<br />
+		</p>
+
+		<h3>Testing Non-existing file requests</h3>
+		<p>
+			Requesting a Non-existing file, checking for:<br />
+			- Status 404 (Not Found)<br />
+		</p>
+
+		<h3>Testing non-HTTP requests</h3>
+		<p>
+			Sending the server some bytes, i.e. non-HTTP-request, and checking for:<br />
+			- Status 500 (Internal Server Error).<br />
+		</p>
+
+		<h3>Testing directory traversal is disallowed</h3>
+		<p>
+			Requesting a file outside the root directory (i.e. with '../'), and checking for:<br />
+			- Status 403 (Forbidden).<br />
+		</p>
+
+		<h3>Testing JSON middleware + PUT requests </h3>
+		<p>
+			- Testing the json-middleware parses the request body correctly (in case it's JSON). <br />
+			- Testing the response.json() function works + sets type to 'application/json'. <br />
+			- Testing PUT requests (using app.put()). <br />
+		</p>
+
+		<h3>Testing urlencoded middleware + POST requests </h3>
+		<p>
+			- Testing the urlencoded-middleware parses the request body correctly (in case 
+				it's type is 'application/x-www-form-urlencoded'). <br />
+			- Testing POST requests (using app.post()). <br />
+		</p>
+
+		<h3>Testing bodyParser middleware + DELETE requests </h3>
+		<p>
+			- Testing the bodyParser-middleware parses the request body correctly (JSON or urlencoded). <br />
+			- Testing DELETE requests (using app.delete()). <br />
+		</p>
+
+		<h3>Testing Illegal methods are not accepted </h3>
+		<p>
+			Testing that non-GET/POST/PUT/DELETE requests return error 405 (method not allowed). <br />
+			Notice non-HTTP methods will be responded with error 500 (non-HTTP-request), whereas HTTP-methods that are not <br />
+			supported (such as OPTIONS, TRACE..) will be responded with a 405. <br />
+		</p>
+
+		<h3>Testing request parsing (params, query, cookies)</h3>
+		<p>
+			- Testing that req.params is populated corretcly according to the request. <br />
+			- Testing that req.query is populated corretcly according to the query (in path). <br />
+			- Testing that req.cookies is populated corretcly according to the 'Cookie' header. <br />
+			- Testing that req.param() returns the corresponding parameter. <br />
+			- Testing that req.is() returns the correct answer according to the content-type. <br />
+			- - - Testing 3 formats: 'text/html', 'html', 'text/*' - all should return true for 'text/html'. <br />
+			- Testing that req.host is populated correctly (and that an absolute url is parsed correctly to host+path).<br />
+		</p>
+
+		<h3>Testing setting cookies</h3>
+		<p>
+			- Testing that resp.cookie() creates a corresponding Set-Cookie header. <br />
+			- Testing that multiple 'Set-Cookie' headers are allowed in the same response. <br />
+			- Testing that the cookie's default path is '/'. <br />
+			- Using both 'Expires' and 'MaxAge'. <br />
+		</p>
+
+		<h3>Testing only the first matched-route send() occurs</h3>
+		<p>
+			Testing only the first matched-route can send() to client, by defining 3 matching routes <br />
+			and checking that only the first one sends a response. <br />
+		</p>
+
+		<h3>Testing all matching routes are taken in case none of them used send()/json()</h3>
+		<p>
+			Testing the request has taken all (3) matching routes as long no send()/json() was used. <br />
+		</p>
+	</body>
+</html>

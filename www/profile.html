@@ -1,0 +1,107 @@
+<html>
+<head>
+	<title>Netanel's 67555 site</title>
+    <link href="profile.css" rel="stylesheet" type="text/style" />
+    <link href="calculator.css" rel="stylesheet" type="text/style" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> <!-- jQuery -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script> <!-- jQuery UI for dialogs -->
+    <script type="text/javascript" src="calculator.js"></script>
+</head>
+<body>
+	<div id="authBox">
+		<form action="javascript:void(0);" method="post">
+			<span class="authInputLabels">Username: </span>
+			<input type="text" name="username" id="username" class="authInput" value="" />
+			<span class="authInputLabels">Password: </span>
+			<input type="text" name="password" id="password" class="authInput" value="  Some name" />
+			<input type="submit" id="authButton" value="Send" /> 
+		</form>
+	</div>
+	<hr />
+	
+	<div id="midbox">
+		<img src="pic.jpg" id="pic" />
+		<div id="personalDetails">
+			<br />
+			<u>
+				Netanel ,
+				<b>Winiwarter</b>
+				<br />
+				<br />
+				<b>(305614018)</b>
+			</u>
+		</div>
+		<br />
+		<p>
+			Welcome to my personal website,
+		</p>
+		<p>
+			I'm 22 years old, from Tzur-Hadassah, <br />
+			near Jerusalem. <br />
+
+		</p>
+		<p>
+			I'm a Computer-Engineering student in <br />
+			the Hebrew University in Jerusalem. <br />
+			I'm currently in the middle of my 4th year, <br />
+			heading towards an M.Sc in Computer-Science next year.
+		</p>
+		<br />
+		<br />
+		<table>
+			<tr class="head">
+				<th>URL</th>
+				<th>Pros</th>
+			</tr>
+			<tr>
+				<td><a href="http://stackexchange.com/">Stack Exchange</a></td>
+				<td>Best Q&amp;A forums for programmers &amp; computer scientists, including StackOverflow, Programmers, etc.</td>
+			</tr>
+			<tr class="alt">
+				<td><a href="http://www.ted.com/">TED</a></td>
+				<td>Countless riveting and insightful talks about science and technology.</td>
+			</tr>
+			<tr>
+				<td><a href="http://arstechnica.com/">Ars Technica</a></td>
+				<td>Great tech site including informative articles.</td>
+			</tr>
+		</table>
+		<br />
+		<br />
+		<br />
+		<br />
+		<hr />
+	</div>
+
+	<div id="calc">
+		<form id="calcForm">
+			<table id="calcTable">
+				<tr class="head">
+					<th colspan="4"><input type="text" name="calcScreen" id="calcScreen" class="calcText" value="0" /></th>
+				</tr>
+				<tr id="calcButtonRow">
+					<td><input type="button" id="calcAdd" class="calcButton" value="+" /></td>
+					<td><input type="button" id="calcMul" class="calcButton" value="&times;" /></td>
+					<td><input type="button" id="calcSettings" class="calcButton" value="Settings" /></td>
+					<td><input type="button" id="calcClear" class="calcButton" value="Clear" /></td>
+				</tr>
+				<tr>
+					<td colspan="4"><input type="text" name="calcInput" id="calcInput" class="calcText" value="" /></td>
+				</tr>
+			</table>
+		</form>
+		<div id="calcSettingsDialog">
+			<form id="calcSettingsForm" action="javascript:void(0);">
+				<span id="calcSettingsLabel"> Default value: </span>
+				<input type="text" id="calcDefaultVal" class="authInput" value="0" />
+			</form>
+		</div>
+	</div>	
+	
+	<div id="amusing">
+		<p>
+			It compiles!! Let's ship it.
+		</p>
+	</div>
+</body>
+</html>
